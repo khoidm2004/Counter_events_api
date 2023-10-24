@@ -1,0 +1,16 @@
+@baseurl = http://127.0.0.1:3000
+
+### GET endpoint /
+GET {{baseurl}}/
+
+### GET endpoint /api/
+GET {{baseurl}}/api/
+
+### POST endpoint /api/event-counter/increment
+POST {{baseurl}}/api/event-counter/increment
+
+### POST endpoint /api/event-counter/reset-count
+POST {{baseurl}}/api/event-counter/reset-count
+
+### GET endpoint /api/event-counter/get-count
+GET  {{baseurl}}/api/event-counter/get-count
