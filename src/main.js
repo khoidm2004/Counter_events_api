@@ -6,8 +6,6 @@ app.use(express.json());
 
 app.use('/', route);
 
-app.use(express.static("public_html"));
-
 const PORT = 3000;
 const HOST = "127.0.0.1";
 
