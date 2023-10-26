@@ -7,8 +7,6 @@ app.use(express.json());
 
 app.use('/', route);
 
-app.use(express.static("public_html"));
-
 const PORT = process.env.PORT
 const HOST = process.env.HOST
 
