@@ -1,4 +1,7 @@
-@baseurl = http://127.0.0.1:3000
+@baseurl=http://{{$dotenv HOST}}:{{$dotenv PORT}}
+
+### GET endpoint /
+GET {{baseurl}}/
 
 ### GET endpoint /api/
 GET {{baseurl}}/api/
