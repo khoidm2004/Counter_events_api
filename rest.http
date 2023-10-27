@@ -1,9 +1,12 @@
 @baseurl=http://{{$dotenv HOST}}:{{$dotenv PORT}}
 
-@api={{baseurl}}/api/v2
+@api={{baseurl}}/API/v2
 
 ### GET endpoint /
 GET {{baseurl}}/ HTTP/1.1
+
+### GET v2
+GET {{api}}/ HTTP/1.1
 
 ### POST endpoint increment
 POST {{api}}/increment HTTP/1.1
