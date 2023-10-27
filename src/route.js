@@ -2,21 +2,21 @@ const express = require("express");
 const router = express.Router();
 const counter = require("./counter");
 
-router.get("/api/",(req,res)=>{
-    res.send("OK");
+router.get("/",(req,res)=>{
+    res.send("v1");
 });
 
-router.post("/api/event-counter/increment",(req,res)=>{
+router.post("/increment",(req,res)=>{
     counter.increment();
     res.json({message:"Event Counter increased", count:counter.getEventCount});
 });
 
-router.post("/api/event-counter/reset-count",(req,res)=>{
+router.post("/reset-count",(req,res)=>{
     counter.resetEventCount();
     res.json({message:"Event Counter is reset", count:counter.resetEventCount});
 });
 
-router.get("/api/event-counter/get-count",(req,res)=>{
+router.get("/get-count",(req,res)=>{
     res.json({Counter: counter.getEventCount()});
 });
 

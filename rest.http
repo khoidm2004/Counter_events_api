@@ -1,16 +1,15 @@
 @baseurl=http://{{$dotenv HOST}}:{{$dotenv PORT}}
 
+@api={{baseurl}}/api/v1
+
 ### GET endpoint /
-GET {{baseurl}}/
+GET {{baseurl}}/ HTTP/1.1
 
-### GET endpoint /api/
-GET {{baseurl}}/api/
+### POST endpoint increment
+POST {{api}}/increment HTTP/1.1
 
-### POST endpoint /api/event-counter/increment
-POST {{baseurl}}/api/event-counter/increment
+### POST endpoint reset-count
+POST {{api}}/reset-count HTTP/1.1
 
-### POST endpoint /api/event-counter/reset-count
-POST {{baseurl}}/api/event-counter/reset-count
-
-### GET endpoint /api/event-counter/get-count
-GET  {{baseurl}}/api/event-counter/get-count
+### GET endpoint get-count
+GET  {{api}}/get-count
