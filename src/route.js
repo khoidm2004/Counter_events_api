@@ -3,7 +3,7 @@ const router = express.Router();
 const counter = require("./counter");
 
 router.get("/",(req,res)=>{
-    res.send("v1");
+    res.send("v2");
 });
 
 router.post("/increment",(req,res)=>{
